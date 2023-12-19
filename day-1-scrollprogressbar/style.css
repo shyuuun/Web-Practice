@@ -99,22 +99,6 @@ header nav a:nth-child(5):hover{
     color: #fff;
 }
 
-.hint{
-    position: fixed;
-    top: calc(50vh - 15px);
-    right: 20px;
-    width: 30px;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hint i{
-    font-size: 3rem;
-    color: #fff;
-}
 
 .hint::after{
     content: "Scroll";
