@@ -1,23 +1,18 @@
 <!-- 
-
     References: 
     
     https://www.youtube.com/watch?v=uV8kH5RgSZU&ab_channel=WebDevMadeEasy
     https://www.youtube.com/watch?v=KAG5wNPdoTw&ab_channel=GreatStack
     
-
     Requirements:
 
-    1. When scrolled down, the circles in left-side selector 
-    should be big based on what page focused in
+    1. When scrolled down, the circles in right-side selector 
+    should be white in border based on what page focused in
     2. Responsive
     3. Should have a scroll snap
     4. Circles should have a icons
 
-
-
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,34 +26,44 @@
 </head>
 <body>
     <div class="icons">
-        <a class="circle" href="#page-1"></a>
-        <a class="circle" href="#page-2"></a>
-        <a class="circle" href="#page-3"></a>
-        <a class="circle" href="#page-4"></a>
-        <a class="circle" href="#page-5"></a>
+        <a class="circle active" href="#page-1" id="circle-1">
+            <i class='bx bxs-sushi' ></i>
+        </a>
+        <a class="circle" href="#page-2" id="circle-2">
+            <i class='bx bxs-pizza' ></i>
+        </a>
+        <a class="circle" href="#page-3" id="circle-3">
+            <i class='bx bxs-lemon'></i>
+        </a>
+        <a class="circle" href="#page-4" id="circle-4">
+            <i class='bx bxs-cake' ></i>
+        </a>
+        <a class="circle" href="#page-5" id="circle-5">
+            <i class='bx bxs-cookie' ></i>
+        </a>
     </div>
 
     <div class="snap-container">
         <section id="page-1">
-            <h1 class="header">Page 1</h1>
+            <h1 class="header">Sushi!</h1>
         </section>
         <section id="page-2">
-            <h1 class="header">Page 2</h1>
+            <h1 class="header">Pizza</h1>
         </section>
         <section id="page-3">
-            <h1 class="header">Page 3</h1>
+            <h1 class="header">Lemon</h1>
         </section>
         <section id="page-4">
-            <h1 class="header">Page 4</h1>
+            <h1 class="header">Cake</h1>
         </section>
         <section id="page-5">
-            <h1 class="header">Page 5</h1>
+            <h1 class="header">Cookie</h1>
         </section>
     </div>
     
     
 
-
+    <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/443cbaef6a.js" crossorigin="anonymous"></script>
 </body>
 </html>
