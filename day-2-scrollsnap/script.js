@@ -22,7 +22,7 @@ const snapContainer = document.querySelector('.snap-container');
 const changeCircle = (e) => {
     let scrollValue = e.currentTarget.scrollTop;
 
-    console.log(scrollValue);
+    // console.log(scrollValue);
     if(scrollValue >= 0 && scrollValue <= 666){
         document.querySelector(".active").classList.remove("active");
         document.getElementById("circle-1").classList.add("active");
