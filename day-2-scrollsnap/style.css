@@ -8,6 +8,7 @@
 
 body { 
     font-family: 'Fira Sans', sans-serif;
+
 }
 
 .icons { 
@@ -59,34 +60,42 @@ body {
     background-color: #a973eb;
 }
 
+.snap-container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
 section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    scroll-snap-align: start;
+
 }
 
-section:nth-child(2){
+section:nth-child(1){
     background-color: #408fde;
     color: #eee;
 }
 
-section:nth-child(3){
+section:nth-child(2){
     background-color: #496ede;
     color: #eee;
 }
 
-section:nth-child(4){
+section:nth-child(3){
     background-color: #665aed;
     color: #eee;
 }
 
-section:nth-child(5){
+section:nth-child(4){
     background-color: #6d51c9;
     color: #eee;
 }
 
-section:nth-child(6){
+section:nth-child(5){
     background-color: #a973eb;
     color: #eee;
 }
@@ -94,6 +103,7 @@ section:nth-child(6){
 section .header {
     font-size: 3rem;
     text-align: center;
+    text-shadow: 1px 1px 4px #000;
 }
 
 
