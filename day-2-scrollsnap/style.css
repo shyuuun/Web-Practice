@@ -59,6 +59,43 @@ body {
     background-color: #a973eb;
 }
 
+section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(2){
+    background-color: #408fde;
+    color: #eee;
+}
+
+section:nth-child(3){
+    background-color: #496ede;
+    color: #eee;
+}
+
+section:nth-child(4){
+    background-color: #665aed;
+    color: #eee;
+}
+
+section:nth-child(5){
+    background-color: #6d51c9;
+    color: #eee;
+}
+
+section:nth-child(6){
+    background-color: #a973eb;
+    color: #eee;
+}
+
+section .header {
+    font-size: 3rem;
+    text-align: center;
+}
+
 
 
 
