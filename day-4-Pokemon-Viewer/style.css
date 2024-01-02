@@ -52,6 +52,10 @@ body {
   border-radius: 10%;
   border: 2px solid black;
 }
+.wrapper .container-card .container-description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .wrapper .container-card .container-ability {
   display: flex;
   align-items: center;
@@ -71,10 +75,46 @@ body {
 }
 .wrapper .container-card .container-card-pkmn-type {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   text-align: start;
   margin-top: 20px;
   font-size: 0.6rem;
+}
+.wrapper .container-card .container-input {
+  text-align: start;
+  margin-top: 20px;
+}
+.wrapper .container-card .container-input input {
+  width: 90%;
+  background-color: #353030;
+  padding: 8px;
+  border-radius: 24px;
+  color: #eee;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+.wrapper .container-card .container-input input::-moz-placeholder {
+  color: rgba(212, 211, 211, 0.8078431373);
+}
+.wrapper .container-card .container-input input::placeholder {
+  color: rgba(212, 211, 211, 0.8078431373);
+}
+.wrapper .container-card .container-input button {
+  position: relative;
+  top: 8px;
+  border-radius: 45%;
+  overflow: hidden;
+  border: none;
+}
+.wrapper .container-card .container-input button img {
+  width: 32px;
+  height: 32px;
+}
+.wrapper .container-card .container-input button:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 .wrapper .container-card .pkmn-type-bug {
   background-color: #59bf76;
