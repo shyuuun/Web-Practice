@@ -32,6 +32,45 @@ await makes a function wait for a Promise
 
 */
 
+const fetchSave = async () => {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon/ditto');
+    
+    try {
+        if(!response.ok){
+            throw new Error("Could not fetch resources");
+        }
+
+        const data = await response.json();
+        localStorage.setItem("pkmn", JSON.stringify(data));
+        console.log("Data fetch and stored in local", data);
+
+
+    } catch(error) {
+        console.error(error);
+    }
+
+}
+
+const populateList = () => {
+    const storedData = JSON.parse(localStorage.getItem("pkmn"));
+    const listContainer = document.getElementById("list-container");
+
+    if(storedData) {
+        const pkmSprite = storedData.sprites.front_default;
+        const imgElement = document.getElementById("pkmSprite");
+
+        imgElement.src = pkmSprite;
+        imgElement.style.display = "block";
+    } else {
+        listContainer.textContent = "No Data Found";
+    }
+}
+
+
+
+fetchSave();
+populateList();
+
 async function fetchData() {
 
     const getPkmName = document.getElementById("pkmName").value.toLowerCase();

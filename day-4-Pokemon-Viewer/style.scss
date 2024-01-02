@@ -1,0 +1,126 @@
+@import 'colors';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+
+@mixin pokemon-type($type) {
+    background-color: $type;
+    padding: 6px;
+    border-radius: 25%;
+    color: #eee;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background: $golden_yellow;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $orange, $golden_yellow);  /* Chrome 10-25, Safari 5.1-6   */
+    background: linear-gradient(to right, $orange, $golden_yellow); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    .container-card {
+        width: 30%;
+        padding: 22px;
+        border-radius: 25px;
+        background: #eee;
+        box-shadow: rgba(0,0,0,0.5);
+        z-index: 1;
+
+        text-align: center;
+
+        .container-header-name {
+            display: flex;
+            
+
+            .pkmn-name {
+                font-weight: 500;
+                font-size: 1.3rem;
+            }
+            .pkmn-category {
+                color: rgba(0,0,0,0.4);
+                font-size: .9rem;
+                margin-left: 8px;
+            }
+        }
+
+        .pkmn-dex-no { 
+                color: rgba(0,0,0,0.4);
+        }
+
+        .container-card-img { 
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .card {
+                text-align: center;
+                border-radius: 10%;
+                border: 2px solid black;
+            }
+        }
+
+        .container-ability {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .container-height-weight{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .container-text {
+            font-size: .9rem;
+        }
+
+        .container-text-small {
+            font-size: .6rem;
+        }
+
+        .container-card-pkmn-type {
+            display: flex;
+            align-items: center;
+            text-align: start;
+            margin-top: 20px;
+
+            font-size: .6rem;
+        }
+
+        .pkmn-type-bug { @include pokemon-type($bug);}
+        .pkmn-type-dark { @include pokemon-type($dark);}
+        .pkmn-type-electric {@include pokemon-type($electric); color: #000}
+        .pkmn-type-fairy {@include pokemon-type($fairy); color: #000}
+        .pkmn-type-fighting {@include pokemon-type($fight);}
+        .pkmn-type-fire {@include pokemon-type($fire);}
+        .pkmn-type-flying {@include pokemon-type($flying);}
+        .pkmn-type-ghost {@include pokemon-type($ghost);}
+        .pkmn-type-grass {@include pokemon-type($grass);}
+        .pkmn-type-ice {@include pokemon-type($ice);}
+        .pkmn-type-dragon{@include pokemon-type($dragon);}
+        .pkmn-type-normal{@include pokemon-type($normal);}
+        .pkmn-type-ground{@include pokemon-type($ground);}
+        .pkmn-type-psychic{@include pokemon-type($psychic);}
+        .pkmn-type-water{@include pokemon-type($water);}
+        .pkmn-type-poison{@include pokemon-type($poison);}
+        .pkmn-type-rock{@include pokemon-type($rock);}
+        .pkmn-type-steel{@include pokemon-type($steel);}
+    }
+}
+
+
+

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #FDC830; /* fallback for old browsers */ /* Chrome 10-25, Safari 5.1-6   */
+  background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.wrapper .container-card {
+  width: 30%;
+  padding: 22px;
+  border-radius: 25px;
+  background: #eee;
+  box-shadow: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  text-align: center;
+}
+.wrapper .container-card .container-header-name {
+  display: flex;
+}
+.wrapper .container-card .container-header-name .pkmn-name {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.wrapper .container-card .container-header-name .pkmn-category {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 0.9rem;
+  margin-left: 8px;
+}
+.wrapper .container-card .pkmn-dex-no {
+  color: rgba(0, 0, 0, 0.4);
+}
+.wrapper .container-card .container-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.wrapper .container-card .container-card-img .card {
+  text-align: center;
+  border-radius: 10%;
+  border: 2px solid black;
+}
+.wrapper .container-card .container-ability {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrapper .container-card .container-height-weight {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.wrapper .container-card .container-text {
+  font-size: 0.9rem;
+}
+.wrapper .container-card .container-text-small {
+  font-size: 0.6rem;
+}
+.wrapper .container-card .container-card-pkmn-type {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  margin-top: 20px;
+  font-size: 0.6rem;
+}
+.wrapper .container-card .pkmn-type-bug {
+  background-color: #59bf76;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-dark {
+  background-color: #3f3a38;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-electric {
+  background-color: #f2ef98;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+  color: #000;
+}
+.wrapper .container-card .pkmn-type-fairy {
+  background-color: #fcc2fc;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+  color: #000;
+}
+.wrapper .container-card .pkmn-type-fighting {
+  background-color: #c44121;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-fire {
+  background-color: #F37335;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-flying {
+  background-color: #9e87e5;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-ghost {
+  background-color: #614a91;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-grass {
+  background-color: #5eea33;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-ice {
+  background-color: #1fe8ef;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-dragon {
+  background-color: #8b1fba;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-normal {
+  background-color: #c0c1b4;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-ground {
+  background-color: #e0c635;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-psychic {
+  background-color: #f48df4;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-water {
+  background-color: #5e92e0;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-poison {
+  background-color: #c349d1;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-rock {
+  background-color: #937e14;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}
+.wrapper .container-card .pkmn-type-steel {
+  background-color: #b1b2c6;
+  padding: 6px;
+  border-radius: 25%;
+  color: #eee;
+}/*# sourceMappingURL=style.css.map */
