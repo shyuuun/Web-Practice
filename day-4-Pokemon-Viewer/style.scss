@@ -59,7 +59,8 @@ body {
         }
 
         .container-card-img { 
-            display: flex;
+            display: none;
+            //display: flex;
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -72,18 +73,21 @@ body {
         }
 
         .container-description {
+            display: none;
             margin-top: 20px;
             margin-bottom: 20px;
         }
 
         .container-ability {
-            display: flex;
+            display: none;
+            //display: flex;
             align-items: center;
             justify-content: space-around;
         }
 
         .container-height-weight{
-            display: flex;
+            display: none;
+            //display: flex;
             align-items: center;
             justify-content: space-around;
             margin-top: 20px;
@@ -98,7 +102,8 @@ body {
         }
 
         .container-card-pkmn-type {
-            display: flex;
+            display: none;
+            //display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             align-items: center;

@@ -11,37 +11,38 @@
         <div class="container-card">
 
             <div class="container-header-name">
-                <h3 class="pkmn-name">
-                    Ditto
+                <h3 class="pkmn-name" id="pkmn-name">
+                    Pokemon Finder
                 </h3>
-                <p class="pkmn-dex-no">
-                    #0132
+                <p class="pkmn-dex-no" id="pkmn-dex-no">
+                    #0000
                 </p>
             </div>
 
 
             <div class="container-card-img">
                 <div class="card">
-                    <img src="assets/ditto-test.png" alt="normal" srcset="">
+                    <img src="assets/ditto-test.png" id="pkmn-sprite-normal" alt="normal" srcset="">
                     <p>Normal</p>
                 </div>
                 <div class="card">
-                    <img src="assets/ditto-shiny-test.png" alt="src" srcset="">
+                    <img src="assets/ditto-shiny-test.png" id="pkmn-sprite-shiny" alt="src" srcset="">
                     <p>Shiny</p>
                 </div>
             </div>
 
             <div class="container-description">
-                <p class="container-text">
+                <p class="container-text" id="pkmn-description">
                     Ditto rearranges its cell structure to transform itself into other shapes. 
                     However, if it tries to transform itself into something by relying on its memory, 
                     this Pokémon manages to get details wrong.
                 </p>
             </div>
 
-            <h5 class="container-header">Abilities</h4>
+            
 
             <div class="container-ability">
+                <h5 class="container-header">Abilities</h4>
                 <p class="container-text">
                     Limber
                 </p>
@@ -58,13 +59,13 @@
             <div class="container-height-weight">
                 <div class="container-height">
                     <h5 class="container-header">Height</h4>
-                    <p class="container-text-small">
+                    <p class="container-text-small" id="pkmn-height">
                         0.3 m
                     </p>
                 </div>
                 <div class="container-weight">
                     <h5 class="container-header">Weight</h4>
-                    <p class="container-text-small">
+                    <p class="container-text-small" id="pkmn-weight">
                         4.0 kg
                     </p>
                 </div>
@@ -93,8 +94,8 @@
             </div>
 
             <div class="container-input">
-                <input type="text" name="" id="" placeholder="Enter Pokemon">
-                <button type="button"><img src="assets/pokeball.svg" alt=""></button>
+                <input type="text" id="enterPokemon" placeholder="Enter Pokemon">
+                <button type="button" onclick="fetchData()"><img src="assets/pokeball.svg" alt=""></button>
             </div>
 
         </div>
