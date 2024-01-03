@@ -39,29 +39,31 @@ body {
 
         text-align: center;
 
-        .container-header-name {
-            display: flex;
-            
+        .sectionContain {
+            display:none;
+            //display: flex;
+            justify-content: center;
+            align-items: center;
 
-            .pkmn-name {
-                font-weight: 500;
-                font-size: 1.3rem;
-            }
-            .pkmn-category {
-                color: rgba(0,0,0,0.4);
-                font-size: .9rem;
-                margin-left: 8px;
-            }
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .pkmn-name {
+            font-weight: 500;
+            font-size: 1.3rem;
+        }
+        .pkmn-category {
+            color: rgba(0,0,0,0.4);
+            font-size: .9rem;
+            margin-left: 8px;
         }
 
         .pkmn-dex-no { 
                 color: rgba(0,0,0,0.4);
         }
 
-        .container-card-img { 
-            display: none;
-            //display: flex;
-            align-items: center;
+        .card-img { 
             justify-content: space-around;
             flex-wrap: wrap;
 
@@ -72,25 +74,12 @@ body {
             }
         }
 
-        .container-description {
-            display: none;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .container-ability {
-            display: none;
-            //display: flex;
-            align-items: center;
+        .ability {
             justify-content: space-around;
         }
 
-        .container-height-weight{
-            display: none;
-            //display: flex;
-            align-items: center;
+        .height-weight{
             justify-content: space-around;
-            margin-top: 20px;
         }
 
         .container-text {
@@ -101,14 +90,9 @@ body {
             font-size: .6rem;
         }
 
-        .container-card-pkmn-type {
-            display: none;
-            //display: flex;
-            justify-content: space-around;
+        .card-pkmn-type {
             flex-wrap: wrap;
-            align-items: center;
             text-align: start;
-            margin-top: 20px;
             font-size: .6rem;
         }
 
