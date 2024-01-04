@@ -39,7 +39,7 @@ const fetchData = async() => {
         const getAbility = pkmnData.abilities[0].ability.name;
         const getHiddenAbility = pkmnData.abilities[1].ability.name;
         
-        
+    
         pkmnName.innerHTML = getName;
         pkmnNumber.innerHTML = getNumber;
         pkmnNormal.src = getNormal;
@@ -49,14 +49,7 @@ const fetchData = async() => {
         pkmnAbility.innerHTML = getAbility;
         pkmHideAbility.innerHTML = getHiddenAbility;
         pkmnDescription.innerHTML = getFlavorTxt;
-
-
-        
-
         viewCard.forEach(i => i.style.display = "flex");
-
-
-
         
     } catch(error) {
         console.error(error);
