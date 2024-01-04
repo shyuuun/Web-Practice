@@ -155,8 +155,17 @@ body {
     }
 }
 
-@media screen {
-    
+@media screen and (max-width: 758px){
+    .wrapper 
+        .container-card {
+        width: 80%;
+
+        .container-input {
+            input {
+                width: 85%;
+            }
+        }
+    }
 }
 
 

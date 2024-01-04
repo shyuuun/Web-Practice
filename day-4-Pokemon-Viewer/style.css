@@ -216,4 +216,13 @@ body {
   padding: 6px;
   border-radius: 25%;
   color: #eee;
+}
+
+@media screen and (max-width: 758px) {
+  .wrapper .container-card {
+    width: 80%;
+  }
+  .wrapper .container-card .container-input input {
+    width: 85%;
+  }
 }/*# sourceMappingURL=style.css.map */

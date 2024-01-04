@@ -9,13 +9,20 @@ const fetchData = async() => {
     const pkmnHeight = document.getElementById('pkmn-weight');
     const pkmnAbility = document.getElementById('pkmn-ability');
     const pkmHideAbility = document.getElementById('pkmn-hide-ability');
-    
+    const viewCard = document.querySelectorAll('.sectionContain');
+
+
     const pkmnResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pkmnGetName}`);
     const pkmnSpeciesRes = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pkmnGetName}`)
-    console.log(pkmnGetName);
+
 
     try {
         if(!pkmnResponse.ok || !pkmnSpeciesRes.ok) {
+
+            viewCard.forEach(i => i.style.display = "none");
+            const pkmnDescContain = document.getElementById('pkmn-desc-contain');
+            pkmnDescContain.style.display = "flex";
+
             pkmnDescription.innerHTML = "No Pokemon Found";
             throw new Error("Couldn't not fetch resource");
         } 
@@ -31,15 +38,8 @@ const fetchData = async() => {
         const getFlavorTxt = pkmnSpeciesData.flavor_text_entries[0].flavor_text;
         const getAbility = pkmnData.abilities[0].ability.name;
         const getHiddenAbility = pkmnData.abilities[1].ability.name;
-
-        console.log(getName);
-        console.log(getNumber);
-        console.log(getNormal);
-        console.log(getShiny);
-        console.log(getWeight);
-        console.log(getHeight);
-        console.log(getFlavorTxt);
-
+        
+        
         pkmnName.innerHTML = getName;
         pkmnNumber.innerHTML = getNumber;
         pkmnNormal.src = getNormal;
@@ -51,7 +51,7 @@ const fetchData = async() => {
         pkmnDescription.innerHTML = getFlavorTxt;
 
 
-        const viewCard = document.querySelectorAll('.sectionContain');
+        
 
         viewCard.forEach(i => i.style.display = "flex");
 
