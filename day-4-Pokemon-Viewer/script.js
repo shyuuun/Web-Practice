@@ -40,13 +40,11 @@ const fetchData = async() => {
         const getFlavorTxt = pkmnSpeciesData.flavor_text_entries[0].flavor_text;
         const getAbility = pkmnData.abilities[0].ability.name;
         const getHiddenAbility = pkmnData.abilities[1].ability.name;
-        
-        pkmnType.querySelectorAll('p').forEach(i => {i.remove()}); 
+
+        pkmnType.querySelectorAll('p').forEach(i => {i.remove()}); // clear all pkmn-types elements 
 
         const types = pkmnData.types; // it will produce a array so we use a loop to access this.
         //types.forEach(type => console.log(`Slot: ${type.slot} ${type.type.name}`));
-
-        
 
         types.forEach(type => {
             const addElement = document.createElement('p');
