@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
+:root {
+	--green-100: #d5e8d9;
+	--gray-100: #f1f7f2;
+	--lilac-100: #dfe7ff;
+	--pink-200: #ffb8ce;
+	--blue-200: #8ce9ff;
+	--lilac-200: #c5b8ff;
+	--yellow-200:#FCE0A2;
+	--yellow-300: #ffea6f;
+	--default-black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Spline Sans Mono", monospace;
+    background: var(--lilac-100);
+}
+
+
+.container {
+    width: 40%;
+    overflow: hidden;
+    background-color: var(--lilac-200);
+    padding: 36px;
+    box-shadow: 5px 7px var(--default-black);
+    transition: .2s;
+    section.header {
+        h2 { 
+            font-size: 1.8em;
+            font-weight: bolder;
+        }
+        text-align: center;
+        margin-bottom: 16px;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label { 
+            font-size: 1.2em;
+            font-weight: bolder;
+
+        }
+
+        input { 
+            font-family: "Spline Sans Mono", monospace;
+            font-size: .8rem;
+            border: 2px solid var(--default-black);
+            box-shadow: 4px 6px var(--default-black);
+            margin-top: 16px;
+            padding: 12px;
+            width: 100%;
+            outline: none;
+            transition: .2s;
+        }
+
+        input:focus { 
+            transform: translateY(3px);
+            box-shadow: 1px 2px var(--default-black);
+        }
+
+        button { 
+            background-color: var(--pink-200);
+            width: 100%;
+            font-family: "Spline Sans Mono", monospace;
+            margin-top: 16px;
+            border: 2px solid var(--default-black);
+            box-shadow: 4px 6px var(--default-black);
+            outline: none;
+            padding: 16px;
+            transition: .2s;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: translateY(3px);
+            box-shadow: 1px 2px var(--default-black);
+        }
+
+        a { 
+            color: var(--default-black);
+        }
+
+        a:active {
+            color: var(--gray-100);
+        }
+
+    }
+}
