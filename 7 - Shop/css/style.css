@@ -14,6 +14,8 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #4fa6e3;
+  color: #eee;
 }
 nav .sort {
   display: flex;
@@ -28,24 +30,37 @@ nav .sort .collection-sort select {
 }
 
 section {
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 64px);
-  gap: 10px;
+  min-height: 100vh;
+  gap: 15px;
+  background-color: #238fdc;
 }
 section .card {
   display: flex;
   flex-direction: column;
-  flex: 0 0 10%;
-  border-radius: 42px;
+  background-color: #f0f8fe;
+  border-radius: 12px;
+  padding: 1em;
+  gap: 10px;
 }
 section .card .card__photo img {
   -o-object-fit: cover;
      object-fit: cover;
-  height: 100%;
-  width: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.btn-buy {
+  border: none;
+  font-size: 1rem;
+  padding: 0.5em;
+  background-color: #4c9bd3;
+  color: #f1f8fd;
+  border-radius: 12px;
 }
 
 .label {
@@ -54,7 +69,7 @@ section .card .card__photo img {
 }
 
 .text-logo {
-  color: black;
+  color: #eee;
   text-decoration: underline;
   font-weight: 700;
   font-size: 1.3rem;
