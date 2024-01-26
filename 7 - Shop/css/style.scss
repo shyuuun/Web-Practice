@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+
 @import 'colors';
 
 
@@ -21,11 +23,12 @@ body {
 nav {
     padding: 1.2em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 
     background-color: $base;
     color: $white;
+
     .sort { 
 
         display: flex;
@@ -39,6 +42,8 @@ nav {
             }
         }
     }
+
+
 }
 
 section {
@@ -70,13 +75,26 @@ section {
     }
 }
 
-.btn-buy { 
+.btn { 
     border: none;
     font-size: 1rem;
     padding: .5em;
     background-color: $pastel_purple;
     color: $white;
     border-radius: 12px;
+    
+    &:hover {
+        background-color: darken($pastel_purple, 10);
+    }
+
+    &.big {
+        font-size: 2rem;
+    }
+
+    &.navIcon {
+        display: none;
+        font-size: 2rem;
+    }
 }
 
 .label {
@@ -93,5 +111,33 @@ section {
     font-size: 1.9rem;
 }
 
+
+@media screen and (max-width: 560px) {
+
+    nav {
+
+        &.responsive {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            transition: top 3s linear;
+            .sort {
+                display: flex;
+            }
+        }
+
+        .sort {
+            display: none;
+        }
+    }
+
+    .btn.navIcon {
+        display: block;
+    }
+}
 
 

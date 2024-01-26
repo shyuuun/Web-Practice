@@ -14,7 +14,7 @@ body {
 nav {
   padding: 1.2em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: #EDB5E8;
   color: #ffffff;
@@ -56,13 +56,23 @@ section .card .card__photo img {
   height: 300px;
 }
 
-.btn-buy {
+.btn {
   border: none;
   font-size: 1rem;
   padding: 0.5em;
   background-color: #D6B5ED;
   color: #ffffff;
   border-radius: 12px;
+}
+.btn:hover {
+  background-color: #bf8ce3;
+}
+.btn.big {
+  font-size: 2rem;
+}
+.btn.navIcon {
+  display: none;
+  font-size: 2rem;
 }
 
 .label {
@@ -76,4 +86,26 @@ section .card .card__photo img {
   text-decoration: underline;
   font-weight: 700;
   font-size: 1.9rem;
+}
+
+@media screen and (max-width: 560px) {
+  nav.responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    transition: top 3s linear;
+  }
+  nav.responsive .sort {
+    display: flex;
+  }
+  nav .sort {
+    display: none;
+  }
+  .btn.navIcon {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
