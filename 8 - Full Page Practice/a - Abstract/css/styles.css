@@ -34,15 +34,10 @@ nav .nav__btns {
 .btn.border {
   border: 1px solid #fff;
   border-radius: 12px;
-  transition: background-color 150ms linear;
-}
-.btn.border:hover {
-  background-color: #243497;
 }
 .btn.hollow {
   border: 1px solid #fff;
   border-radius: 12px;
-  transition: background-color 100ms linear;
 }
 .btn.hollow:hover {
   background-color: #fff;
