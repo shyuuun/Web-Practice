@@ -57,7 +57,7 @@ section {
 
 
     .card {
-
+        position: relative;
         display: flex;
         flex-direction: column;
         background-color: $white;
@@ -74,6 +74,27 @@ section {
         }
     }
 }
+
+
+.tag { 
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    rotate: (-45deg);
+    color: $white;
+    padding: 1em;
+    border-radius: 12px;
+
+    &.featured { 
+        background-color: $rose;
+    }
+    &.on-sale { 
+        background-color: $pastel_purple;
+    }
+}
+
+
 
 .btn { 
     border: none;
