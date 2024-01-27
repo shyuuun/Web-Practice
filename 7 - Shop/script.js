@@ -11,62 +11,47 @@ const responsive = () => {
 
 // for our sorting items 
 const cards = document.querySelectorAll('.card');
-const sortItem = value => {
-    switch(value) {
-        case 'featured':
-            console.log('Featured selected');
-            cards.forEach(card => {
-                if(!card.querySelector('.tag.featured')){
-                    card.style.display = 'none';
-                } else { 
-                    card.style.display = 'flex'
-                }
-            });
-            break;
-        case 'sale':
-            console.log('Sale selected');
-            cards.forEach(card => {
-                if(!card.querySelector('.tag.on-sale')){
-                    card.style.display = 'none';
-                } else { 
-                    card.style.display = 'flex'
-                }
-            });
-            break;
-        default: {
-            cards.forEach(card => {
-                card.style.display = 'flex';
-            });
+
+const filterSort = () => {
+    const filterSelect  = document.getElementById('filter').value;
+    const sortSelect  = document.getElementById('sortCollect').value;
+
+    cards.forEach(card => {
+        meetFilter = false;
+        meetSort = false;
+
+        switch(filterSelect) {
+            case 'jackets':
+                meetFilter = card.querySelector('#jacket') !== null;
+                break;
+            case 'hats':
+                meetFilter = card.querySelector('#hat') !== null;
+                break;
+            default:
+                meetFilter = true;
         }
-    }
+
+        switch(sortSelect) {
+            case 'featured':
+                meetSort = card.querySelector('.tag.featured') !== null;
+                break;
+            case 'sale':
+                meetSort = card.querySelector('.tag.on-sale') !== null;
+                break;
+            default:
+                meetSort = true;
+        }
+
+        if(meetFilter && meetSort) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
 }
 
-// for our product classification
-const filterItem = value => {
-    switch(value){
-        case 'jackets': 
-            cards.forEach(card => {
-                if(card.querySelector('#jacket')){
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            })
-            break;
-        case 'hats':
-            cards.forEach(card => {
-                if(card.querySelector('#hat')){
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            })
-            break;
-    }
-}
-
-
-
+document.getElementById('filter').addEventListener('change', filterSort);
+document.getElementById('sortCollect').addEventListener('change', filterSort);
 
 
 
