@@ -40,13 +40,19 @@ nav {
     font-weight: 600;
     font-family: "Noto Sans", sans-serif;
 
+
     &.border {
         border: 1px solid $white;
         border-radius: 12px;
+        transition: background-color 150ms linear;
+    }
+    &.border:hover {
+        background-color: darken($blue, 20%);
     }
     &.hollow {
         border: 1px solid $white;
         border-radius: 12px;
+        transition: background-color 100ms linear;
     }
     &.hollow:hover {
         background-color: $white;
