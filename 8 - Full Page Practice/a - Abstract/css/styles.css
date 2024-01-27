@@ -14,7 +14,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  min-height: 4em;
+  min-height: 5em;
   background-color: #000000;
 }
 nav .nav__btns {
@@ -23,21 +23,22 @@ nav .nav__btns {
 }
 
 .btn {
-  padding: 12px;
+  padding: 7px;
   background: none;
   outline: none;
   color: #fff;
   font-size: 1.1rem;
   font-weight: 600;
   font-family: "Noto Sans", sans-serif;
+  min-width: 120px;
 }
 .btn.border {
-  border: 1px solid #fff;
   border-radius: 12px;
   transition: background-color 150ms linear;
 }
 .btn.border:hover {
-  background-color: #243497;
+  background-color: #fff;
+  color: #000000;
 }
 .btn.hollow {
   border: 1px solid #fff;

@@ -21,7 +21,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    min-height: 4em;
+    min-height: 5em;
     background-color: $black;
 
     .nav__btns {
@@ -32,21 +32,21 @@ nav {
 
 
 .btn {
-    padding: 12px;
+    padding: 7px;
     background: none;
     outline: none;
     color: $white;
     font-size: 1.1rem;
     font-weight: 600;
     font-family: "Noto Sans", sans-serif;
-
+    min-width: 120px;
     &.border {
-        border: 1px solid $white;
         border-radius: 12px;
         transition: background-color 150ms linear;
     }
     &.border:hover {
-        background-color: darken($blue, 20%);
+        background-color: $white;
+        color: $black;
     }
     &.hollow {
         border: 1px solid $white;
