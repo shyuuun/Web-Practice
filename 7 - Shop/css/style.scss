@@ -94,7 +94,10 @@ section {
     }
 }
 
-
+.text-class {
+    font-size: .9rem;
+    color: #ddd;
+}
 
 .btn { 
     border: none;
@@ -134,7 +137,6 @@ section {
 
 
 @media screen and (max-width: 560px) {
-
     nav {
 
         &.responsive {

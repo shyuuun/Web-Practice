@@ -74,6 +74,11 @@ section .card .card__photo img {
   background-color: #D6B5ED;
 }
 
+.text-class {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
 .btn {
   border: none;
   font-size: 1rem;
