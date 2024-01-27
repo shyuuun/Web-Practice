@@ -1,10 +1,7 @@
 
 // to our responsive navbar
 const responsive = () => {
-    
     const navBar = document.querySelector('nav');
-    const sort = document.getElementById('sort');
-
     if(navBar.classList.value === ''){
         navBar.classList.add('responsive');
     } else {
@@ -14,7 +11,7 @@ const responsive = () => {
 
 // for our sorting items 
 const cards = document.querySelectorAll('.card');
-const sortItem = (value) => {
+const sortItem = value => {
     switch(value) {
         case 'featured':
             console.log('Featured selected');
@@ -41,6 +38,30 @@ const sortItem = (value) => {
                 card.style.display = 'flex';
             });
         }
+    }
+}
+
+// for our product classification
+const filterItem = value => {
+    switch(value){
+        case 'jackets': 
+            cards.forEach(card => {
+                if(card.querySelector('#jacket')){
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            })
+            break;
+        case 'hats':
+            cards.forEach(card => {
+                if(card.querySelector('#hat')){
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            })
+            break;
     }
 }
 
