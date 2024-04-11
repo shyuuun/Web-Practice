@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>9 - To Do</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="card__header">
+                <h1 class="card__heading">Todo</h1>
+            </div>
+            <div class="card__input">
+                <input class="card__input-box" type="text" id="addTodoText">
+                <button class="card__btn" id="addTodoBtn">
+                    <i class='bx bxs-send'></i>
+                </button>
+            </div>
+            <div class="card__selection">
+                <!-- list of todo -->
+                <button class="card__btn card__btn__selection active" id="allBtn"><i class='bx bx-list-ul'></i></button>
+                <!-- list of completed todo -->
+                <button class="card__btn card__btn__selection" id="completedBtn"><i class='bx bxs-checkbox-checked'></i></button>
+            </div>
+            <div class="card__task__container">
+                <div class="card__tasks">
+                    <div class="card__desc">
+                        <input type="checkbox" name="" id="">
+                        <!-- <input class="card__input-box" type="text" name="" id=""> -->
+                        <p class="card__tasks_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Voluptates, quae.</p>
+                    </div>
+                    <div class="card__btn__group">
+                        <!-- edit button -->
+                        <button class="card__btn small"><i class='bx bxs-edit-alt'></i></button>
+                        <!-- delete button -->
+                        <button class="card__btn small"><i class='bx bxs-trash'></i></button>
+                    </div>
+                </div>
+                <div class="card__tasks">
+                    <div class="card__desc">
+                        <input type="checkbox" name="" id="">
+                        <!-- <input class="card__input-box" type="text" name="" id=""> -->
+                        <p class="card__tasks_desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Voluptates, quae.</p>
+                    </div>
+                    <div class="card__btn__group">
+                        <!-- edit button -->
+                        <button class="card__btn small"><i class='bx bxs-edit-alt'></i></button>
+                        <!-- delete button -->
+                        <button class="card__btn small"><i class='bx bxs-trash'></i></button>
+                    </div>
+                </div>
+                <div class="card__tasks">
+                    <div class="card__desc">
+                        <input type="checkbox" name="" id="">
+                        <!-- <input class="card__input-box edit" type="text" name="" id=""> -->
+                        <!-- <p class="card__tasks_desc">c</p> -->
+                    </div>
+                    <div class="card__btn__group">
+                        <!-- edit button -->
+                        <button class="card__btn small"><i class='bx bxs-edit-alt'></i></button>
+                        <!-- delete button -->
+                        <button class="card__btn small"><i class='bx bxs-trash'></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

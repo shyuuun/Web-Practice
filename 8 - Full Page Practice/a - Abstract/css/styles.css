@@ -53,12 +53,22 @@ main .info__container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 100px;
+  margin: 0 10%;
 }
 main .info__container .card {
   display: flex;
   align-items: center;
-  border: 1px solid red;
   flex: 1 0 50%;
+  font-size: 1.4rem;
+  height: 300px;
+}
+main .info__container .card .card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .info__container .card .card__photo {
+  margin-right: 10px;
 }
 main .info__container .card .card__photo img {
   -o-object-fit: contain;

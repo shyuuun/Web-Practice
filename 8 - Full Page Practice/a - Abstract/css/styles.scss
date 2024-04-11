@@ -65,17 +65,29 @@ main {
         display: flex;
         flex-wrap: wrap;
         margin-top: 100px;
-
+        margin: 0 10%;
         .card {
             display: flex;
             align-items: center;
-            @include debug;
+
             flex: 1 0 50%;
-            
-            .card__photo img {
-                object-fit: contain;
-                width: 100px;
-                height: auto;
+            font-size: 1.4rem;
+            height: 300px;
+
+            .card__text {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                
+            }
+
+            .card__photo {
+                margin-right: 10px;
+                img {
+                    object-fit: contain;
+                    width: 100px;
+                    height: auto;
+                }
             }
         }
     }
