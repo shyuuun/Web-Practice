@@ -13,15 +13,29 @@ const exampleData = [
 
 const cardTasks = document.querySelector("div.card__task__container");
 
+// state for the view (all or completed)
+let currentView = 'all';
+
 function displayData() {
 	// clear the container first
 	cardTasks.innerHTML = "";
 
 	// displays all the todos from array
-
 	if (exampleData.length !== 0) {
 		exampleData.forEach((data) => {
-			cardTasks.innerHTML += `
+			displayTemplate(data);
+		});
+	} else {
+		cardTasks.innerHTML += `
+        <div class="card__tasks">
+        <p>No Items</p>
+        </div>
+        `;
+	}
+}
+
+function displayTemplate(data) { 
+	cardTasks.innerHTML += `
             <div class="card__tasks">
                 <div class="card__desc">
                     <input type="checkbox" name="" id="checkBox" data-id="${
@@ -46,14 +60,13 @@ function displayData() {
                 </div>
             </div>        
             `;
+}
 
-		});
-	} else {
-		cardTasks.innerHTML += `
-        <div class="card__tasks">
-        <p>No Items</p>
-        </div>
-        `;
+function checkView() { 
+	if(currentView === 'all') {
+		displayData();
+	} else { 
+		showComplete();
 	}
 }
 
@@ -86,13 +99,15 @@ const allBtn = document.getElementById("allBtn");
 const completeBtn = document.getElementById("completedBtn");
 
 allBtn.addEventListener("click", () => {
-	displayData();
+	currentView = 'all';
+	checkView();
 	completeBtn.classList.remove("active");
 	allBtn.classList.add("active");
 });
 
 completeBtn.addEventListener("click", () => {
-	showComplete();
+	currentView = 'completed';
+	checkView();
 	allBtn.classList.remove("active");
 	completeBtn.classList.add("active");
 });
@@ -106,31 +121,7 @@ function showComplete() {
 
 	if (completedData.length !== 0) {
 		completedData.forEach((data) => {
-			cardTasks.innerHTML += `
-            <div class="card__tasks">
-                <div class="card__desc">
-                    <input type="checkbox" name="" id="checkBox" data-id="${
-						data.id
-					}" ${data.isCompleted === true ? "checked" : ""}>
-                    <input class="card__input-box hidden" type="text" name=" ">
-                    <p class="card__tasks_desc ${
-						data.isCompleted === true ? "completed" : ""
-					}" >
-                        ${data.task}
-                    </p>
-                </div>
-                <div class="card__btn__group">
-                    <!-- edit button -->
-                    <button class="card__btn small" id="editBtn" data-id="${
-						data.id
-					}"><i class='bx bxs-edit-alt'></i></button>
-                    <!-- delete button -->
-                    <button class="card__btn small" id="deleteBtn" data-id="${
-						data.id
-					}"><i class='bx bxs-trash'></i></button>
-                </div>
-            </div>            
-            `;
+			displayTemplate(data);
 		});
 	} else {
 		cardTasks.innerHTML += `
@@ -169,7 +160,7 @@ function addItem() {
 		addTodoText.value = "";
 
 		// updates the container
-		displayData();
+		checkView();
 	} else {
 		console.log("Please add todo");
 	}
@@ -179,12 +170,12 @@ function deleteItem(id) {
 	const index = exampleData.findIndex((todo) => todo.id === id);
 	if (index !== -1) {
 		exampleData.splice(index, 1);
-		displayData();
+		checkView();
 	}
 }
 
 function updateCheckItem(id, condition) {
 	const index = exampleData.findIndex((todo) => todo.id === id);
 	exampleData[index].isCompleted = condition;
-	displayData();
+	checkView();
 }
