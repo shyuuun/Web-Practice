@@ -41,7 +41,8 @@ function displayTemplate(data) {
                     <input type="checkbox" name="" id="checkBox" data-id="${
 						data.id
 					}" ${data.isCompleted === true ? "checked" : ""}>
-                    <input class="card__input-box hidden" type="text" name=" ">
+                    <input class="card__input-box hidden" id="editTextBox-${data.id}" type="text" data-id="${
+						data.id}">
                     <p class="card__tasks_desc ${
 						data.isCompleted === true ? "completed" : ""
 					}" >
@@ -70,27 +71,7 @@ function checkView() {
 	}
 }
 
-// event delegation
-cardTasks.addEventListener("click", (e) => {
-	const target = e.target;
 
-	// Find the closest ancestor button element
-	const deleteButton = target.closest("button#deleteBtn");
-	const editBtn = target.closest("button#editBtn");
-	const checkbox = target.closest("#checkBox");
-
-	if (deleteButton) {
-		// get the id of the btn
-		const id = parseInt(deleteButton.dataset.id);
-		deleteItem(id);
-	} else if (editBtn) {
-		console.log("Edit Btn clicked");
-	} else if (checkbox) {
-		const id = parseInt(checkbox.dataset.id);
-		if (checkbox.checked === true) updateCheckItem(id, true);
-		else updateCheckItem(id, false);
-	}
-});
 
 // display initial data
 displayData();
@@ -111,6 +92,50 @@ completeBtn.addEventListener("click", () => {
 	allBtn.classList.remove("active");
 	completeBtn.classList.add("active");
 });
+
+// event delegation
+// const inputBox = document.querySelector('#editTextBox');
+// const task = document.querySelector('')
+cardTasks.addEventListener("click", (e) => {
+	const target = e.target;
+
+	// Find the closest ancestor button element
+	const deleteButton = target.closest("button#deleteBtn");
+	const editBtn = target.closest("button#editBtn");
+	const checkbox = target.closest("#checkBox");
+	
+
+	if (deleteButton) {
+		// get the id of the btn
+		const id = parseInt(deleteButton.dataset.id);
+		deleteItem(id);
+	} else if (editBtn) {
+		console.log("Edit Btn clicked"); 
+		const id = parseInt(editBtn.dataset.id);
+		const inputBox = document.querySelector(`#editTextBox-${id}`);
+		inputBox.classList.toggle('hidden');
+
+		inputBox.removeEventListener('keypress', handleEditKeyPress); // Remove previous listener
+        inputBox.addEventListener('keypress', handleEditKeyPress); 
+
+
+	} else if (checkbox) {
+		const id = parseInt(checkbox.dataset.id);
+		if (checkbox.checked === true) updateCheckItem(id, true);
+		else updateCheckItem(id, false);
+	}
+});
+
+function handleEditKeyPress(e) {
+    if (e.key === "Enter") {
+        const id = parseInt(this.dataset.id); // Get task id from inputBox dataset
+        const updatedTask = this.value.trim(); // Get updated task text from inputBox value
+        if (updatedTask !== '') {
+            editItem(id, updatedTask); // Update the task
+            this.classList.add('hidden'); // Hide the input box after editing
+        }
+    }
+}
 
 function showComplete() {
 	const completedData = exampleData.filter(
@@ -170,6 +195,14 @@ function deleteItem(id) {
 	const index = exampleData.findIndex((todo) => todo.id === id);
 	if (index !== -1) {
 		exampleData.splice(index, 1);
+		checkView();
+	}
+}
+
+function editItem(id, task) {
+	const index = exampleData.findIndex((todo) => todo.id === id);
+	if(index !== -1) {
+		exampleData[index].task = task;
 		checkView();
 	}
 }
